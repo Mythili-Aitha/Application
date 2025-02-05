@@ -1,10 +1,9 @@
 import './App.css';
+import VerticalStepper from './Components/VerticalStepper';
 
 function App() {
   return (
-    <>
-    <h1>HI</h1>
-    </>
+   <VerticalStepper />
   );
 }
 
