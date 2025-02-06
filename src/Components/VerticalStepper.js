@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Box, Stepper, Step, StepLabel, Button, Card, Typography } from '@mui/material';
 import PersonalInfo from './PersonalInfo';
 import Preview from './Preview';
+import ListEmployee from './ListEmployee';
 
 const steps = ["Personal Information", "Job Applications", "Interview Schedule", "Preview"];
 
@@ -37,7 +38,7 @@ export default function VerticalStepper() {
         <Card sx={{ display: "flex", flexDirection: "column", padding: 3,  minWidth: 300, flexGrow:1 }}>
           <Typography variant='h6' gutterBottom>{steps[activeStep]}</Typography>
           {activeStep === 0 && <PersonalInfo user={handleChange} /> }
-          {activeStep === 1 && <Typography>Track your job applications here.</Typography>}
+          {activeStep === 1 && <ListEmployee />}
           {activeStep === 2 && <Typography>Schedule and manage your interviews.</Typography>}
           {activeStep === 3 && <Preview details={pInfo} />}
 
